@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>OFFBEAT Settings</title>
+
+    <!-- Google Font -->
+
+    <link rel="preconnect"
+        href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <link rel="stylesheet"
+        href="css/settings.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<!--=====================================
+            HEADER
+======================================-->
+
+<header>
+
+    <div class="logo-box">
+
+        <img src="images/logo.png"
+            alt="OFFBEAT">
+
+    </div>
+
+    <div class="title">
+
+        <h2>OFFBEAT</h2>
+
+        <p>Settings</p>
+
+    </div>
+
+</header>
+
+<!--=====================================
+        STORAGE INFORMATION
+======================================-->
+
+<section class="card">
+
+    <div class="section-title">
+
+        <i class="fa-solid fa-chart-simple"></i>
+
+        <h3>Storage Information</h3>
+
+    </div>
+
+    <div class="info-row">
+
+        <span>
+
+            <i class="fa-solid fa-box"></i>
+
+            Total Parcels
+
+        </span>
+
+        <strong id="totalParcels">
+
+            0
+
+        </strong>
+
+    </div>
+
+    <div class="info-row">
+
+        <span>
+
+            <i class="fa-solid fa-users"></i>
+
+            Customers
+
+        </span>
+
+        <strong id="totalCustomers">
+
+            0
+
+        </strong>
+
+    </div>
+
+    <div class="info-row">
+
+        <span>
+
+            <i class="fa-solid fa-id-card"></i>
+
+            Last Order
+
+        </span>
+
+        <strong id="lastOrder">
+
+            OB000000
+
+        </strong>
+
+    </div>
+
+    <div class="info-row">
+
+        <span>
+
+            <i class="fa-solid fa-database"></i>
+
+            Storage Used
+
+        </span>
+
+        <strong id="storageUsed">
+
+            0 KB
+
+        </strong>
+
+    </div>
+
+</section>
+
+<!--=====================================
+        DATA MANAGEMENT
+======================================-->
+
+<section class="card">
+
+    <div class="section-title">
+
+        <i class="fa-solid fa-folder-open"></i>
+
+        <h3>Data Management</h3>
+
+    </div>
+
+    <button
+        class="setting-btn"
+        id="exportBtn">
+
+        <i class="fa-solid fa-download"></i>
+
+        Export Backup
+
+    </button>
+
+    <button
+        class="setting-btn"
+        id="importBtn">
+
+        <i class="fa-solid fa-upload"></i>
+
+        Import Backup
+
+    </button>
+
+    <input
+        type="file"
+        id="importFile"
+        accept=".json"
+        hidden>
+
+</section>
+
+<!--=====================================
+        APPLICATION
+======================================-->
+
+<section class="card">
+
+    <div class="section-title">
+
+        <i class="fa-solid fa-sliders"></i>
+
+        <h3>Application</h3>
+
+    </div>
+
+    <div class="toggle-row">
+
+        <span>
+
+            <i class="fa-solid fa-print"></i>
+
+            Auto Print
+
+        </span>
+
+        <label class="switch">
+
+            <input
+                type="checkbox"
+                id="autoPrint">
+
+            <span class="slider"></span>
+
+        </label>
+
+    </div>
+
+    <div class="toggle-row">
+
+        <span>
+
+            <i class="fa-solid fa-floppy-disk"></i>
+
+            Auto Save
+
+        </span>
+
+        <label class="switch">
+
+            <input
+                type="checkbox"
+                id="autoSave">
+
+            <span class="slider"></span>
+
+        </label>
+
+    </div>
+
+    <div class="toggle-row">
+
+        <span>
+
+            <i class="fa-solid fa-moon"></i>
+
+            Dark Mode
+
+        </span>
+
+        <label class="switch">
+
+            <input
+                type="checkbox"
+                id="darkMode">
+
+            <span class="slider"></span>
+
+        </label>
+
+    </div>
+
+</section>
+
+<!--=====================================
+        DANGER ZONE
+======================================-->
+
+<section class="card danger">
+
+    <div class="section-title">
+
+        <i class="fa-solid fa-triangle-exclamation"></i>
+
+        <h3>Danger Zone</h3>
+
+    </div>
+
+    <button
+        class="danger-btn"
+        id="resetParcelBtn">
+
+        <i class="fa-solid fa-trash"></i>
+
+        Reset Parcel History
+
+    </button>
+
+    <button
+        class="danger-btn"
+        id="resetOrderBtn">
+
+        <i class="fa-solid fa-rotate-left"></i>
+
+        Reset Order Counter
+
+    </button>
+
+    <button
+        class="danger-btn factory"
+        id="factoryResetBtn">
+
+        <i class="fa-solid fa-skull-crossbones"></i>
+
+        Factory Reset
+
+    </button>
+
+</section>
+
+<!--=====================================
+            ABOUT
+======================================-->
+
+<section class="card">
+
+    <div class="section-title">
+
+        <i class="fa-solid fa-circle-info"></i>
+
+        <h3>About</h3>
+
+    </div>
+
+    <div class="info-row">
+
+        <span>
+
+            Version
+
+        </span>
+
+        <strong>
+
+            1.0.0
+
+        </strong>
+
+    </div>
+
+    <div class="info-row">
+
+        <span>
+
+            Developer
+
+        </span>
+
+        <strong>
+
+            Nisite Webcraft
+
+        </strong>
+
+    </div>
+
+    <div class="info-row">
+
+        <span>
+
+            Storage
+
+        </span>
+
+        <strong>
+
+            LocalStorage
+
+        </strong>
+
+    </div>
+
+</section>
+
+</div>
+
+<script src="js/settings.js"></script>
+
+</body>
+
+</html>
