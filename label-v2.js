@@ -132,29 +132,47 @@ new QRCode(qrContainer, {
 /*==========================
       BARCODE
 ==========================*/
-
 /*==========================
       GENERATE BARCODE
 ==========================*/
 
-const barcodeElement = document.getElementById("barcode");
+const barcodeSVG = document.getElementById("barcode");
 
-if (barcodeElement) {
+barcodeSVG.innerHTML = "";
 
-    const barcodeValue = parcel.tracking && parcel.tracking.trim() !== ""
-        ? parcel.tracking
-        : parcel.phone;
+const barcodeValue =
+    (parcel.tracking && parcel.tracking.trim()) ||
+    (parcel.orderId && parcel.orderId.trim()) ||
+    "OB000001";
 
-    JsBarcode(barcodeElement, barcodeValue, {
-        format: "CODE128",
-        lineColor: "#000000",
-        width: 2,
-        height: 80,
-        displayValue: false,
-        margin: 5
-    });
+JsBarcode(barcodeSVG, barcodeValue, {
 
-}
+    format: "CODE128",
+
+    lineColor: "#000000",
+
+    width: 2,
+
+    height: 70,
+
+    displayValue: true,
+
+    font: "monospace",
+
+    fontSize: 14,
+
+    textMargin: 5,
+
+    margin: 10,
+
+    background: "#ffffff"
+
+});
+/*==========================
+      GENERATE BARCODE
+==========================*/
+
+
 
 /*==========================
       BUTTONS

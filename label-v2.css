@@ -278,7 +278,7 @@ table td{
 
 .payment-table td:first-child{
 
-    width:40%;
+    width:30%;
 
     font-weight:bold;
 
@@ -306,106 +306,52 @@ table td{
 
 .product-table th:first-child{
 
-    width:28%;
+    width:18%;
 
 }
 
 .product-table th:last-child{
 
-    width:72%;
+    width:60%;
 
 }
-
 /*==========================
-    BARCODE SECTION
+      VERTICAL BARCODE
+==========================*/
+/*==========================
+        VERTICAL BARCODE
 ==========================*/
 
 .barcode-cell{
 
+    width:110px;
+    height:280px;
     padding:0;
-
-    position:relative;
-
-    vertical-align:middle;
-
-    text-align:center;
-
-}
-
-.barcode-wrapper{
-
-    height:210px;
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
     overflow:hidden;
-
+    position:relative;
 }
 
-/* Rotate barcode vertically */
+.barcode-container{
+
+    width:280px;
+    height:80px;
+
+    position:absolute;
+
+    top:50%;
+    left:50%;
+
+    transform:translate(-50%,-50%) rotate(-90deg);
+
+}
 
 #barcode{
 
-    transform:rotate(90deg);
-
-    transform-origin:center;
-
-    width:180px;
-
-    height:auto;
+    width:250px;
+    height:80px;
+    display:block;
 
 }
-
-/*==========================
-    PRODUCT DETAILS TABLE
-==========================*/
-
-.details-table{
-
-    width:100%;
-
-    border-collapse:collapse;
-
-    margin:0;
-
-}
-
-.details-table tr{
-
-    height:32px;
-
-}
-
-.details-table td{
-
-    border:1px solid #000;
-
-    padding:6px 8px;
-
-    font-size:12px;
-
-}
-
-.details-table td:first-child{
-
-    width:38%;
-
-    font-weight:700;
-
-    background:#f7f7f7;
-
-}
-
-.details-table td:last-child{
-
-    font-weight:600;
-
-}
-
 /*==========================
       SIZE HIGHLIGHT
 ==========================*/
